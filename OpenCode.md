@@ -1,17 +1,19 @@
 # MPC-UI SDK Development Guide
 
 ## Build & Test Commands
-- Build: `pnpm run build`
-- Development mode: `pnpm run dev`
-- Lint: `pnpm run lint`
-- Lint & fix: `pnpm run lint:fix`
-- Type check: `pnpm run check`
-- Format code: `pnpm run format`
-- Run all tests: `pnpm run test`
-- Run single test: `pnpm run test -- -t "test name"`
-- Watch tests: `pnpm run test -- --watch`
+
+- Build: `bun run build`
+- Development mode: `bun run dev`
+- Lint: `bun run lint`
+- Lint & fix: `bun run lint:fix`
+- Type check: `bun run check`
+- Format code: `bun run format`
+- Run all tests: `bun run test`
+- Run single test: `bun run test -- -t "test name"`
+- Watch tests: `bun run test -- --watch`
 
 ## Code Style Guidelines
+
 - Use TypeScript with strict type checking
 - Follow ESLint rules from @sxzz/eslint-config
 - Use Prettier with @sxzz/prettier-config
