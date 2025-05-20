@@ -1,58 +1,60 @@
 {
-	"name": "mpc-ui-sdk",
-	"version": "1.0.0",
-	"packageManager": "pnpm@10.11.0",
-	"description": "MPC-UI Embedding Protocol SDK - Reference implementation for the MPC-UI Embedding Protocol Specification",
-	"type": "module",
-	"license": "MIT",
-	"homepage": "https://github.com/modelcontextprotocol-ui/ui-sdk#readme",
-	"bugs": {
-		"url": "https://github.com/modelcontextprotocol-ui/ui-sdk/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/modelcontextprotocol-ui/ui-sdk.git"
-	},
-	"author": "Nick Randall <nick@nicksrandall.com>",
-	"funding": "https://github.com/sponsors/nicksrandall",
-	"files": ["dist"],
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		"./client": {
-			"types": "./dist/client/index.d.ts",
-			"default": "./dist/client/index.js"
-		},
-		"./host": {
-			"types": "./dist/host/index.d.ts",
-			"default": "./dist/host/index.js"
-		},
-		"./types": {
-			"types": "./dist/types/index.d.ts",
-			"default": "./dist/types/index.js"
-		},
-		"./package.json": "./package.json"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"lint": "biome lint",
-		"lint:fix": "pnpm run lint --fix",
-		"build": "tsdown",
-		"dev": "tsdown --watch",
-		"check": "tsc --noEmit",
-		"format": "biome format --write",
-		"release": "bumpp && pnpm publish",
-		"prepublishOnly": "pnpm run build"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@types/bun": "^1.2.13",
-		"bumpp": "^10.1.1",
-		"tsdown": "^0.11.11",
-		"tsx": "^4.19.4",
-		"typescript": "^5.8.3"
-	}
+  "name": "mpc-ui-sdk",
+  "version": "1.0.1",
+  "packageManager": "bun@1.2.13",
+  "description": "MPC-UI Embedding Protocol SDK - Reference implementation for the MPC-UI Embedding Protocol Specification",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/modelcontextprotocol-ui/ui-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/modelcontextprotocol-ui/ui-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modelcontextprotocol-ui/ui-sdk.git"
+  },
+  "author": "Nick Randall <nick@nicksrandall.com>",
+  "funding": "https://github.com/sponsors/nicksrandall",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./host": {
+      "types": "./dist/host/index.d.ts",
+      "default": "./dist/host/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "biome lint",
+    "lint:fix": "bun run lint --fix",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "check": "tsc --noEmit",
+    "format": "biome format --write",
+    "release": "bumpp && bun publish",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "^1.2.13",
+    "bumpp": "^10.1.1",
+    "tsdown": "^0.11.11",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
 }
