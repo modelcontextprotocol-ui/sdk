@@ -1,20 +1,20 @@
 {
-  "name": "ts-starter",
-  "version": "0.0.0",
+  "name": "mpc-ui-sdk",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.11.0",
-  "description": "My awesome typescript library",
+  "description": "MPC-UI Embedding Protocol SDK - Reference implementation for the MPC-UI Embedding Protocol Specification",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://github.com/sxzz/ts-starter#readme",
+  "homepage": "https://github.com/modelcontextprotocol-ui/ui-sdk#readme",
   "bugs": {
-    "url": "https://github.com/sxzz/ts-starter/issues"
+    "url": "https://github.com/modelcontextprotocol-ui/ui-sdk/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sxzz/ts-starter.git"
+    "url": "git+https://github.com/modelcontextprotocol-ui/ui-sdk.git"
   },
-  "author": "三咲智子 Kevin Deng <sxzz@sxzz.moe>",
-  "funding": "https://github.com/sponsors/sxzz",
+  "author": "Nick Randall <nick@nicksrandall.com>",
+  "funding": "https://github.com/sponsors/nicksrandall",
   "files": [
     "dist"
   ],
@@ -22,7 +22,18 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./host": {
+      "types": "./dist/host/index.d.ts",
+      "default": "./dist/host/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
+    },
     "./package.json": "./package.json"
   },
   "publishConfig": {
@@ -34,7 +45,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
-    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit",
     "format": "prettier --cache --write .",
     "release": "bumpp && pnpm publish",
     "prepublishOnly": "pnpm run build"
