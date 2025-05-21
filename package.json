@@ -1,6 +1,6 @@
 {
   "name": "mpc-ui-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packageManager": "bun@1.2.13",
   "description": "MPC-UI Embedding Protocol SDK - Reference implementation for the MPC-UI Embedding Protocol Specification",
   "type": "module",
