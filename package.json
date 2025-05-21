@@ -42,6 +42,7 @@
   "scripts": {
     "lint": "biome lint",
     "lint:fix": "bun run lint --fix",
+    "test": "bun test",
     "build": "tsdown",
     "dev": "tsdown --watch",
     "check": "tsc --noEmit",
