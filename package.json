@@ -1,6 +1,6 @@
 {
   "name": "mcp-ui-sdk",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "packageManager": "bun@1.2.13",
   "description": "MCP-UI Embedding Protocol SDK - Reference implementation for the MCP-UI Embedding Protocol Specification",
   "type": "module",
