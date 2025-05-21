@@ -1,9 +1,9 @@
 /**
- * MPC-UI Embedding Protocol SDK
+ * MCP-UI Embedding Protocol SDK
  * Version: 1.0.0
  *
  * A TypeScript SDK for implementing embeddable UI elements that conform to the
- * MPC-UI Embedding Protocol Specification (Version 1.0.0).
+ * MCP-UI Embedding Protocol Specification (Version 1.0.0).
  */
 
 import * as JWTUtils from "./jwt";
@@ -36,7 +36,7 @@ import {
 /**
  * Core SDK class that manages communication between the embedded UI and host
  */
-export class MPCUI {
+export class MCPUI {
 	private hostOrigin: string | null = null;
 	private initialized = false;
 	private auth: Auth | null = null;
@@ -475,8 +475,8 @@ export class MPCUI {
 }
 
 /**
- * Factory function to create a new MPC-UI instance
+ * Factory function to create a new MCP-UI instance
  */
-export function createMPCUI(): MPCUI {
-	return new MPCUI();
+export function createMCPUI(): MCPUI {
+	return new MCPUI();
 }

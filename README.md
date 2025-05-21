@@ -1,12 +1,12 @@
-# MPC-UI SDK [![npm](https://img.shields.io/npm/v/mpc-ui-sdk.svg)](https://npmjs.com/package/mpc-ui-sdk)
+# MCP-UI SDK [![npm](https://img.shields.io/npm/v/mcp-ui-sdk.svg)](https://npmjs.com/package/mcp-ui-sdk)
 
 [![Unit Test](https://github.com/modelcontextprotocol-ui/sdk/actions/workflows/unit-test.yml/badge.svg)](https://github.com/modelcontextprotocol-ui/sdk/actions/workflows/unit-test.yml)
 
-A TypeScript SDK for implementing embeddable UI elements that conform to the [MPC-UI Embedding Protocol Specification](https://github.com/modelcontextprotocol-ui/.github/blob/main/README.md) (Version 1.0.0).
+A TypeScript SDK for implementing embeddable UI elements that conform to the [MCP-UI Embedding Protocol Specification](https://github.com/modelcontextprotocol-ui/.github/blob/main/README.md) (Version 1.0.0).
 
 ## Overview
 
-The MPC-UI SDK provides a reference implementation for the MPC-UI Embedding Protocol, which enables interactive UI components to be embedded within AI chat interfaces. This protocol is designed for systems where AI agents are orchestrated via a Multi-Party Computation (MPC) server or similar system that registers and manages available tools.
+The MCP-UI SDK provides a reference implementation for the MCP-UI Embedding Protocol, which enables interactive UI components to be embedded within AI chat interfaces. This protocol is designed for systems where AI agents are orchestrated via a Multi-Party Computation (MCP) server or similar system that registers and manages available tools.
 
 The SDK includes:
 
@@ -18,7 +18,7 @@ The SDK includes:
 ## Installation
 
 ```bash
-npm install mpc-ui-sdk
+npm install mcp-ui-sdk
 ```
 
 ## Usage
@@ -28,10 +28,10 @@ The SDK is divided into three main modules:
 ### 1. Client Module (for Embedded UIs)
 
 ```typescript
-import { createMPCUI } from 'mpc-ui-sdk/client'
+import { createMCPUI } from 'mcp-ui-sdk/client'
 
-// Create a new MPC-UI client instance
-const ui = createMPCUI()
+// Create a new MCP-UI client instance
+const ui = createMCPUI()
 
 // Set up event listeners
 ui.on('initialized', (data) => {
@@ -68,7 +68,7 @@ ui.enableAutoResize(document.getElementById('content'))
 ### 2. Host Module (for Chat Interfaces)
 
 ```typescript
-import { createMCUHost, URLUtils } from 'mpc-ui-sdk/host'
+import { createMCUHost, URLUtils } from 'mcp-ui-sdk/host'
 
 // Create a host instance
 const host = createMCUHost({
@@ -76,7 +76,7 @@ const host = createMCUHost({
   issuer: 'https://your-domain.com',
 })
 
-// Register a UI definition (typically from an MPC server)
+// Register a UI definition (typically from an MCP server)
 const uiRegistration = {
   ui_name: 'Interactive Product Explorer',
   ui_url_template:
@@ -144,7 +144,7 @@ import {
   UIRegistrationPayload,
   ThemeSettings,
   PROTOCOL_VERSION,
-} from 'mpc-ui-sdk/types'
+} from 'mcp-ui-sdk/types'
 
 // Define a UI registration payload
 const registration: UIRegistrationPayload = {
@@ -176,7 +176,7 @@ console.log(`Using protocol version: ${PROTOCOL_VERSION}`)
 
 ## Protocol Specification
 
-This SDK implements the MPC-UI Embedding Protocol Specification (Version 1.0.0), which defines:
+This SDK implements the MCP-UI Embedding Protocol Specification (Version 1.0.0), which defines:
 
 1. **Registration of Embeddable UIs**: How UIs are registered with metadata for discovery
 2. **Agent Logic for UI Selection**: How AI agents select appropriate UIs
@@ -186,7 +186,7 @@ This SDK implements the MPC-UI Embedding Protocol Specification (Version 1.0.0),
 6. **Host-UI Communication**: Message types and formats
 7. **User Consent and Permissions**: How permissions are requested and granted
 
-For the full specification, see the [MPC-UI Embedding Protocol Specification](https://github.com/modelcontextprotocol-ui/.github/blob/main/README.md).
+For the full specification, see the [MCP-UI Embedding Protocol Specification](https://github.com/modelcontextprotocol-ui/.github/blob/main/README.md).
 
 ## Security Considerations
 
@@ -205,10 +205,10 @@ When implementing this SDK:
 
 ```tsx
 import React, { useEffect, useRef } from 'react'
-import { createMPCUI } from 'mpc-ui-sdk/client'
+import { createMCPUI } from 'mcp-ui-sdk/client'
 
 function EmbeddableUI() {
-  const uiRef = useRef(createMPCUI())
+  const uiRef = useRef(createMCPUI())
   const contentRef = useRef<HTMLDivElement>(null)
   const [isInitialized, setIsInitialized] = useState(false)
   const [context, setContext] = useState(null)
@@ -259,7 +259,7 @@ function EmbeddableUI() {
 
 ```typescript
 import express from 'express'
-import { createMCUHost } from 'mpc-ui-sdk/host'
+import { createMCUHost } from 'mcp-ui-sdk/host'
 
 const app = express()
 const host = createMCUHost({

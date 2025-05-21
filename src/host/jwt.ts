@@ -1,5 +1,5 @@
 /**
- * MPC-UI Embedding Protocol SDK - Host JWT Utilities
+ * MCP-UI Embedding Protocol SDK - Host JWT Utilities
  * Version: 1.0.0
  */
 

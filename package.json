@@ -1,8 +1,8 @@
 {
-  "name": "mpc-ui-sdk",
+  "name": "mcp-ui-sdk",
   "version": "1.0.2",
   "packageManager": "bun@1.2.13",
-  "description": "MPC-UI Embedding Protocol SDK - Reference implementation for the MPC-UI Embedding Protocol Specification",
+  "description": "MCP-UI Embedding Protocol SDK - Reference implementation for the MCP-UI Embedding Protocol Specification",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/modelcontextprotocol-ui/ui-sdk#readme",

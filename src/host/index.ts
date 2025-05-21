@@ -1,5 +1,5 @@
 /**
- * MPC-UI Embedding Protocol SDK - Host Implementation
+ * MCP-UI Embedding Protocol SDK - Host Implementation
  * Version: 1.0.0
  */
 

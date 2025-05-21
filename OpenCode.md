@@ -1,4 +1,4 @@
-# MPC-UI SDK Development Guide
+# MCP-UI SDK Development Guide
 
 ## Build & Test Commands
 

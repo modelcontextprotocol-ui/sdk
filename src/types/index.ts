@@ -1,5 +1,5 @@
 /**
- * MPC-UI Embedding Protocol SDK - Shared Types
+ * MCP-UI Embedding Protocol SDK - Shared Types
  * Version: 1.0.0
  */
 
